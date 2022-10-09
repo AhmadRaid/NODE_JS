@@ -1,0 +1,45 @@
+<%- include('../includes/header.ejs') %>
+
+    <div id="main-wrapper">
+    <%- include('../includes/sidebar.ejs') %>
+
+    <%- include('../includes/Navbar.ejs') %>
+    
+<div style="margin-top: 100px;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="store" method="post">
+                <h1></h1>
+                <input type="hidden" name="user_id" value="<%=user._id %>">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Enter The Title:</label>
+                        <input type="text" name="title" value="<% %>" class="form-control" >
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Enter The Description:</label>
+                        <input type="text" name="description" value="<% %>" class="form-control" >
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../includes/footer.ejs') %>
+
+   

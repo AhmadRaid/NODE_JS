@@ -1,0 +1,37 @@
+<%- include('../includes/header.ejs') %>
+
+    <div id="main-wrapper">
+    <%- include('../includes/sidebar.ejs') %>
+
+    <%- include('../includes/Navbar.ejs') %>
+
+    <div style="margin-top: 70px; margin-left: 270px;">
+        <a class="btn btn-success m-1 p-2"
+             href="http://localhost:3000/category/create">Create</a>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            <% for(let post of posts) { %> 
+          <tr>
+            <td><%= post.name %></td>
+            <td>
+                <a href="http://localhost:3000/category/edit/<%= post.id %>">Edit</a>
+                <a href="http://localhost:3000/category/delete/<%= post.id %> ">Delete</a>
+            </td>
+        </tr>
+          <% } %> 
+        </tbody>
+      </table>
+    </div>
+
+<%- include('../includes/footer.ejs') %>
+
+   
